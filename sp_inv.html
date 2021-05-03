@@ -9,6 +9,23 @@
 		<title>Invitation Generator | Services</title>
 		<link rel="stylesheet" href="style.css" type="text/css" />
 		<script type="text/javascript" src="script.js"></script>
+		<style>
+	</style>
+	<script>
+	function allowDrop(ev) {
+  	ev.preventDefault();
+	}
+
+	function drag(ev) {
+  	ev.dataTransfer.setData("text", ev.target.id);
+	}
+
+	function drop(ev) {
+  	ev.preventDefault();
+  	var data = ev.dataTransfer.getData("text");
+  	ev.target.appendChild(document.getElementById(data));
+	}
+	</script>
 	</head>
 	<body>
 		<header>
@@ -37,10 +54,10 @@
 				<div class="container">
 					<div class="container1">
 						<div class="dark">
-									<label>Name of Male:</label>&rarr;<button onclick="ubahNamaA()" id="Btn">Click</button><br/>
+									<label>Inviter:</label>&rarr;<button onclick="ubahNamaA()" id="Btn">Click</button><br/>
 		      				<input type="text" placeholder="Miguel" id="form_mn"/><p id="form_mn">&amp;</p>
 
-									<label>Name of Female:</label>&rarr;<button onclick="ubahNamaB()">Click</button><br/>
+									<label>Invitee:</label>&rarr;<button onclick="ubahNamaB()">Click</button><br/>
 		      				<input type="text" placeholder="Angela" id="form_fn"/><br/>
 
 									<label>Message:</label>&rarr;<button onclick="bagiMessage()">Click</button><br/>
@@ -59,8 +76,9 @@
 						<div class="design">
 							<div id="box_col2">
 			        <label for="colorPicker">
-								<p id="appear1">Male Name</p>
-								<p id="appear2">Female Name</p>
+								<p id="appear1">Inviter</p>
+								<p style="font:20px; text-align:center">&amp;</p>
+								<p id="appear2">Invitee</p>
 								<div id="appear3_box">
 									<p id="appear3">Give a message to your invitees</p>
 								</div>
@@ -82,7 +100,13 @@
 						</div>
 					</div>
 				</div>
-				<button>Save</button>
+				<div id="div_contain">
+					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)"></div>
+					<br>
+					<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event)">
+						<img id="drag1" src="inv1_des.jpg" draggable="true" ondragstart="drag(event)" width="200" height="300">
+					</div>
+				</div>
 
         <footer>
           <p>Made by Razin, Rusyaidi and Safwan, Copyright &copy; 2021</p>

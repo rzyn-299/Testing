@@ -37,10 +37,10 @@
 				<div class="container">
 					<div class="container1">
 						<div class="dark">
-									<label>Name of Male:</label>&rarr;<button onclick="ubahNamaA()" id="Btn">Click</button><br/>
+									<label>Name of Person1:</label>&rarr;<button onclick="ubahNamaA()" id="Btn">Click</button><br/>
 		      				<input type="text" placeholder="Miguel" id="form_mn"/><p id="form_mn">&amp;</p>
 
-									<label>Name of Female:</label>&rarr;<button onclick="ubahNamaB()">Click</button><br/>
+									<label>Name of Person2:</label>&rarr;<button onclick="ubahNamaB()">Click</button><br/>
 		      				<input type="text" placeholder="Angela" id="form_fn"/><br/>
 
 									<label>Message:</label>&rarr;<button onclick="bagiMessage()">Click</button><br/>
@@ -63,13 +63,14 @@
 								<br/>
 								<br/>
 								<br/>
-								<p id="appear1"></p>
-								<p id="appear2"></p>
+								<p id="appear1">Person1</p>
+								<p style="font:20px; text-align:center">&amp;</p>
+								<p id="appear2">Person2</p>
 								<div id="appear3_box">
-									<p id="appear3"></p>
+									<p id="appear3">Give a message to your invitees</p>
 								</div>
-								<p id="appear4"></p><br/>
-								<p id="appear5"></p>
+								<p id="appear4">Specify where the event is being held</p><br/>
+								<p id="appear5">When is the event going to be held?</p>
 							</label>
 							<br/>
 			      </div>
@@ -79,7 +80,7 @@
 			        let output = document.getElementById("print6");
 
 			        box.style.backgroundColor = colorPicker.value;
-							
+
 			        colorPicker.addEventListener("input", function(event){
 			        box.style.backgroundColor = event.target.value;
 			      }, false);

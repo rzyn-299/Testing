@@ -346,12 +346,13 @@ footer a:hover{
   margin: auto;
   overflow: hidden;
   float: right;
+  border: 1px;
 }
 
 .design{
   width: 400px;
   height: 600px;
-  border: 1px solid red;
+  border: 1px;
 }
 #box_col1{
   width: 400px;
@@ -371,7 +372,6 @@ footer a:hover{
   padding: 4px 6px;
   border: 2px;
   font: 16px "Helvetica", "Arial", "sans-serif";
-  background: url("") no-repeat;
   background-size: 350px 350px;
   background-position: center;
   padding-left: -100px;
@@ -427,7 +427,28 @@ footer a:hover{
 }
 
 /* Drag & Drop */
-
+#div_contain{
+  margin: auto;
+  width: 700px;
+  height: 500px;
+  
+}
+#div1 {
+  width: 300px;
+  height: 400px;
+  padding: 10px;
+  border: 1px solid red;
+  margin: auto;
+  float: left;
+}
+#div2 {
+  width: 300px;
+  height: 400px;
+  padding: 10px;
+  border: 1px solid red;
+  margin: auto;
+  float: right;
+}
 
 /* Media Queries */
 @media(max-width: 768px){
